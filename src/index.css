@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body,#root{
+    height: 100%;
+}
+
+@layer{
+    :root{
+        --background: #ffffff;
+        --forground: #09090b;
+        --border: #e3e3e7;
+        *{
+
+        }
+    }
+    .dark{
+        --background: #09090b;
+        --forground: #f9f9f9;
+        color:#f9f9f9;
+        --border: #27272a;
+    }
+}
+
+@layer base{
+    *{
+        @apply box-border border-[--border];
+    }
+
+    body {
+        @apply bg-[--background] text-[--foreground];
+    }
+}
+
+
+.text-justify-last {
+    text-align-last: justify;
+}
+
+/*:root {*/
+/*    --border-color: #c2c8d1;*/
+/*    --primary-color: #13ce66*/:：:
+/*}*/
+
+/*!* pc 宽度大于1200px *!*/
+/*@media screen and (min-width: 1200px){*/
+/*    */
+/*}*/
+
+/*!* 平板 小于1199 大于501px*!*/
+/*@media screen and (max-width: 1199px)  and (min-width: 501px) {*/
+
+/*}*/
+
+/* !* 手机 最大500px*!*/
+/*@media screen and (max-width: 500px) {*/
+/*   */
+/*}*/
+
+/*.border-solid {*/
+/*    border: 1px solid var(--border-color);*/
+/*}*/
+/*.border-radius {*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.border-right {*/
+/*    border: 1px solid  var(--border-color);*/
+/*}*/

@@ -1,2 +1,4 @@
-# react_base
-A react template
+`NodeJs`
+```angular2html
+npm install
+```
