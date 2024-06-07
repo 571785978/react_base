@@ -2,10 +2,8 @@ import {useState, FC, useCallback} from "react";
 import {FieldValues, SubmitHandler, useForm} from "react-hook-form";
 import Input from "@/components/input/Input";
 import Button from "@/components/button/Button";
-import AuthSocialButton from "@/components/button/AuthSocialButton";
 
 type Variant = 'LOGIN' | 'REGISTER'
-
 interface Pops {
 
 }
@@ -14,6 +12,7 @@ const AuthForm:FC<Pops> = ({}:Pops) => {
 
     const [variant, setVariant] = useState<Variant>('LOGIN');
     const [isLoading,setIsLoading] = useState<Boolean>(false);
+    const [buttonText,setButtonText] = useState<ButtonText>('登录')
 
     const toggleVariant = useCallback(() => {
         if(variant === 'LOGIN'){
@@ -47,10 +46,7 @@ const AuthForm:FC<Pops> = ({}:Pops) => {
         }
     }
 
-    const socialAction = (action:String) => {
-        setIsLoading(false)
-    }
-
+ 
     return (
         <div
             className="mt-6 sm:max-auto sm:w-full sm:max-w-md"
@@ -76,14 +72,10 @@ const AuthForm:FC<Pops> = ({}:Pops) => {
                             <div className="w-full border-t border-gray-300" />
                         </div>
                         <div className="relative flex justify-center text-sm">
-                            <span className="bg-white px-2 dark:bg-blackOpt80 dark:text-white-200">
-                                或者
+                            <span className="text-blue-500 cursor-pointer bg-light dark:bg-dark w-12 text-center" onClick={toggleVariant}>
+                            {variant === 'LOGIN' ? '去注册' : '去登录'}
                             </span>
                         </div>
-                    </div>
-                    <div className="mt-6 flex gap-2 justify-center">
-                        <AuthSocialButton onClick={()=> {}} icon="wechat" title="微信登录"/>
-                        <AuthSocialButton onClick={()=> {}} icon="alipay" title="支付宝登录"/>
                     </div>
                 </div>
             </div>

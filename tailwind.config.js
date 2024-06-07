@@ -11,7 +11,12 @@ export default {
         'layout':'200px minmax(900px,1fr) 100px'
       },
       backgroundColor:{
-        'blackOpt80':'#09090b'
+        'blackOpt80':'#09090b',
+        'lightFilter':'#fefeff',
+        'dark':'#0f172a',
+        'light':'#ffffff',
+        'dark-modal':'rgba(15,23,42,0.6)',
+        'light-modal':'rgba(255,255,255,0.6)'
       },
       backdropBlur:{
         'xs':'2px'

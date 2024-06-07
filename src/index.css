@@ -10,16 +10,14 @@ html,body,#root{
     :root{
         --background: #ffffff;
         --forground: #09090b;
-        --border: #e3e3e7;
-        *{
-
-        }
+        --border: #fefeff;
+        color:#636e7d
     }
     .dark{
-        --background: #09090b;
+        --background: #0f172a;
         --forground: #f9f9f9;
-        color:#f9f9f9;
-        --border: #27272a;
+        color:#535a6a;
+        --border: #111d31;
     }
 }
 

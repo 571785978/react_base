@@ -1,7 +1,7 @@
 import {BasicPopup} from "@/components/popup/BasicPopup";
 import AuthForm from "@/components/form/AuthForm.tsx";
 
-const Login = () => {
+const ToolBar = () => {
     return (
         <div
             className="h-full flex justify-center items-center hover:cursor-pointer hover:underline hover:text-blue-300">
@@ -22,4 +22,4 @@ const LoginControl = (isShown:Function) =>{
         </div>
     );
 }
-export default Login;
+export default ToolBar;
