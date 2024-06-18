@@ -16,11 +16,17 @@ export default {
         'dark':'#0f172a',
         'light':'#ffffff',
         'dark-modal':'rgba(15,23,42,0.6)',
-        'light-modal':'rgba(255,255,255,0.6)'
+        'light-modal':'rgba(255,255,255,0.6)',
+        'half-dark': 'rgba(0,0,0,0.5)'
       },
       backdropBlur:{
         'xs':'2px'
-      }
+      },
+      animation:{
+        'fade-in': 'opacity .5s ease-in-out forwards',
+        'fade-out': 'opacity .5s ease-in-out forwards',
+      },
+
     },
   },
   plugins: [

@@ -1,28 +1,29 @@
-import React, {useState} from "react";
+import React, { useState } from 'react'
 import { PopupStateContext } from "@/components/popup/base/UsePopup";
 
-type PopupPops = {
-    children: React.ReactNode;
-    initState?: Boolean,
-    consumer:Function
+
+interface IProps {
+    state?: Boolean,
+    children: React.ReactNode,
 }
 
-export const PopupProvider = ({children,initState=false,consumer}:PopupPops) => {
-    const [show,isShown] = useState<Boolean>(initState);
+export const PopupStateProvider = ({
+    state = false,
+    children
+}: IProps) => {
+    if (!children) throw new Error("children is required")
+    const [show, isShown] = useState<Boolean>(state);
+    const root = window.document.documentElement
     const value = {
         show:show,
-        isShown:(show:Boolean) => {
-            isShown(show)
+        isShown:(val:Boolean)=>{
+            isShown(val);
         }
     }
     return (
         <PopupStateContext.Provider value={value}>
-            <PopupStateContext.Consumer>
-                {(val) => (
-                    consumer(val.isShown)
-                )}
-            </PopupStateContext.Consumer>
-            {value.show && children}
+            {children}
         </PopupStateContext.Provider>
     );
-};
+
+}

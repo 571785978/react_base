@@ -2,6 +2,7 @@ import {useState, FC, useCallback} from "react";
 import {FieldValues, SubmitHandler, useForm} from "react-hook-form";
 import Input from "@/components/input/Input";
 import Button from "@/components/button/Button";
+import { getIcon } from "../icon/Icon";
 
 type Variant = 'LOGIN' | 'REGISTER'
 interface Pops {
@@ -12,7 +13,6 @@ const AuthForm:FC<Pops> = ({}:Pops) => {
 
     const [variant, setVariant] = useState<Variant>('LOGIN');
     const [isLoading,setIsLoading] = useState<Boolean>(false);
-    const [buttonText,setButtonText] = useState<ButtonText>('登录')
 
     const toggleVariant = useCallback(() => {
         if(variant === 'LOGIN'){
@@ -37,6 +37,7 @@ const AuthForm:FC<Pops> = ({}:Pops) => {
     });
 
     const onSubmit:SubmitHandler<FieldValues> = (data) => {
+        debugger;
         setIsLoading(true);
 
         if(variant === 'REGISTER'){
@@ -63,6 +64,7 @@ const AuthForm:FC<Pops> = ({}:Pops) => {
                         fullWidth
                         type="submit"
                     >
+                        {isLoading && getIcon('LoadingTwo' ,'18','filled','mr-2 animate-spin')}
                         {variant === 'LOGIN' ? '登录' : '注册'}
                     </Button>
                 </form>

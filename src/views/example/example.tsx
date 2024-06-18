@@ -1,10 +1,9 @@
-
-// import Input from "@/components/input/Input.tsx";
+import AuthForm from "@/components/form/AuthForm";
 
 const Example = () =>{
     return (
-        <div className="w-full h-full bg-gray-200">
-            {/*<Input placeholder="please input" label="请输入" type="text" id="test" disabled={false} />*/}
+        <div className="w-full h-full bg-gray-200 flex justify-center items-center">
+            <AuthForm />
         </div>
     )
 }

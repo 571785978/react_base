@@ -41,6 +41,7 @@ const Input:React.FC<Pops> = ({
                 <input
                         id={id}
                         type={type}
+                        autoComplete="off"
                         {...register(id,{required})}
                         placeholder={null === placeholder ? null == label ? undefined : `请输入${label}` : placeholder}
                         disabled={disabled}

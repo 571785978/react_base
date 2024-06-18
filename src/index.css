@@ -2,27 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-html,body,#root{
+html,
+body,
+#root {
     height: 100%;
+    width: 100%;
 }
 
-@layer{
-    :root{
+@layer {
+    :root {
         --background: #ffffff;
-        --forground: #09090b;
+        --forground: #0f172a;
         --border: #fefeff;
-        color:#636e7d
+        color: #000000
     }
-    .dark{
+
+    .dark {
         --background: #0f172a;
-        --forground: #f9f9f9;
-        color:#535a6a;
+        --forground: #ffffff;
+        color: #000000;
         --border: #111d31;
     }
 }
 
-@layer base{
-    *{
+@layer base {
+    * {
         @apply box-border border-[--border];
     }
 
@@ -38,7 +42,7 @@ html,body,#root{
 
 /*:root {*/
 /*    --border-color: #c2c8d1;*/
-/*    --primary-color: #13ce66*/:：:
+/*    --primary-color: #13ce66*/
 /*}*/
 
 /*!* pc 宽度大于1200px *!*/
